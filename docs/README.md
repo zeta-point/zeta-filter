@@ -105,7 +105,7 @@ $$
 $$
 
 $$
-\^{z}_k = \frac{1}{\sigma^2_{k-1}+\sigma^2_\beta}e^{i(\alpha+\beta)}
+\tilde{z}\_k = \frac{1}{\sigma^2\_{k-1}+\sigma^2_\beta}e^{i(\alpha+\beta)}
 $$
 
 
@@ -125,7 +125,7 @@ What this posteriori distribution will tell you? It’s nothing new than being d
 </p>
 
 $$
-\sigma^2_k = \frac{\^{\sigma}^2_k\sigma^2_y}{\^{\sigma}^2_k+\sigma^2_y}
+\sigma^2\_k = \frac{\tilde{\sigma}^2\_k\sigma^2_y}{\tilde{\sigma}^2\_k+\sigma^2\_y}
 $$
 
 <p style="text-align: justify">
@@ -133,7 +133,7 @@ Nothing new right?
 </p>
 
 $$
-\frac{1}{\sigma^2_k} = \frac{1}{\^{\sigma}^2_k} + \frac{1}{\sigma^2_y}
+\frac{1}{\sigma^2\_k} = \frac{1}{\^{\sigma}^2\_k} + \frac{1}{\sigma^2\_y}
 $$
 
 <p style="text-align: justify">
@@ -141,7 +141,7 @@ Let’s jump right now to the complex plane.
 </p>
 
 $$
-z_k = \^z_k + z_y
+z\_k = \tilde{z}\_k + z\_y
 $$
 
 <p style="text-align: justify">
