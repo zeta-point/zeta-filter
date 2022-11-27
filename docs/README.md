@@ -25,7 +25,9 @@ Now let me tell you something. I swear, there are more variations of AHRS algori
 <p style="text-align: justify">
 Have you heard about Euler angles? No? Then maybe about the rotation matrix or so called Direct Cosine Matrix …or axis-angle tuple? Of course you must have heard about them! Tait-Bryans angles? I bet the first thought that comes to your mind when you get up in the morning is about rotation quaternions.
 </p>
+
 ## The ugly “thing”
+
 <p style="text-align: justify">
 When I first heard about “quaternion renormalization” it was like… you guys must be kidding me. No seriously, each time you do this a kitten dies. Well, you say “quaternions need to have a unit norm for proper operation” - I say no, do not do this. You know, this renormalization thing is maybe not as bad as the operation you are making and is causing this “problem”.
 </p>
