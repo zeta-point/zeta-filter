@@ -1,4 +1,7 @@
-# What people still don’t understand about rotations? Pssst… and probability
+---
+layout: home
+---
+
 
 The reason why I wrote this is so that this idea won’t get lost. I was mainly disappointed with the people whom this work was presented. Well because they didn’t care at all to even read it. Don’t get me wrong they had experience and were specialized in these topics and yet apart from a single person or two of them if not mistaken - they simply didn’t give a … you know what.
 If you have no interest in engineering, signal processing, Kalman filtering - Sir, Madam please… save the world by not reading this. I warned you.

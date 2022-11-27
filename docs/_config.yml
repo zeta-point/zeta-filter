@@ -1,0 +1,12 @@
+title:
+  What people still don’t understand about rotations?
+  Pssst… and probability
+description: >- # this means to ignore newlines until "baseurl:"
+  Another boring AHRS filter
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
