@@ -133,7 +133,7 @@ Nothing new right?
 </p>
 
 $$
-\frac{1}{\sigma^2\_k} = \frac{1}{\^{\sigma}^2\_k} + \frac{1}{\sigma^2\_y}
+\frac{1}{\sigma^2\_k} = \frac{1}{\tilde{\sigma}^2\_k} + \frac{1}{\sigma^2\_y}
 $$
 
 <p style="text-align: justify">
