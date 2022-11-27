@@ -57,12 +57,31 @@ What I claim is this: error propagation equations and model/state are the same. 
 <p style="text-align: justify">
 So there are many variations of KF when it comes to attitude estimation but at the end they all have the same foundations - gaussian noise, bayesian rules for posteriori distribution. For random variable X that obeys normal distribution, people write:
 </p>
+
+$$
+X: N(\mu, \sigma^2) \land \mu \in \real, \sigma^2 \in \real_{>0}
+$$
+
 <p style="text-align: justify">
 and its PDF looks like this
 </p>
+
+$$
+f(x)= \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+$$
+
 <p style="text-align: justify">
 First let’s not be mentally constrained about this specific fact that variance have to be positive and real
 </p>
+
+$$
+Z: N(0, \sigma^2) \land \mu = 0, \sigma^2 \in \mathbb{C}
+$$
+
+$$
+\zeta(x)= \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}x^2}
+$$
+
 <p style="text-align: justify">
 Oh no, what just happened! But the integral must be 1! What about complex probability and so on? The world won’t be the same place anymore. To be honest I don’t care about this. There was a time when negative numbers were not numbers. Could you freaky believe that?
 </p>
@@ -72,9 +91,23 @@ What is so special about complex variance? Well, as any complex number it has it
 <p style="text-align: justify">
 Also, to avoid confusion and for the sake of simplicity let's just stick to the notation people already got used to. So, let's redefine complex variance or actually a complex “precision”. Yes, they call variance reciprocal a precision.
 </p>
+
+$$
+z = \frac{1}{\sigma^2}e^{i\alpha} \land \sigma^2 \in \real_{>0}, \alpha \in \real, i^2 = -1
+$$
+
 <p style="text-align: justify">
 Now the state equation/model or however called - discrete of course.
 </p>
+
+$$
+\^{z}_k = z_{k-1}z_\beta
+$$
+
+$$
+\^{z}_k = \frac{1}{\sigma^2_{k-1}+\sigma^2_\beta}e^{i(\alpha+\beta)}
+$$
+
 
 <p style="text-align: justify">
 I mean… I’m sorry. This is the error propagation equation for a priori step. Just kidding, this is actually the state. Do you understand? I dare to estimate the error in the state equation. Now one of these professors should come to announce you did not pass to the next term. How can I do this? 
@@ -91,13 +124,26 @@ Well, fairly simple, All sigmas are real and also alpha and beta are real. Then,
 What this posteriori distribution will tell you? It’s nothing new than being done in KF right? Or you actually haven’t done your homework and are so curious to check it? Will you also just do copy pasting?
 </p>
 
+$$
+\sigma^2_k = \frac{\^{\sigma}^2_k\sigma^2_y}{\^{\sigma}^2_k+\sigma^2_y}
+$$
+
 <p style="text-align: justify">
 Nothing new right?
 </p>
 
+$$
+\frac{1}{\sigma^2_k} = \frac{1}{\^{\sigma}^2_k} + \frac{1}{\sigma^2_y}
+$$
+
 <p style="text-align: justify">
 Let’s jump right now to the complex plane.
 </p>
+
+$$
+z_k = \^z_k + z_y
+$$
+
 <p style="text-align: justify">
 Holy mother of all the Kalman Filters papers! Let me tell you this is the most relieving moment. If you still don’t see it, let me explain. Update step is just about adding numbers of the complex plane. Brilliant in its simplicity. This is what complex variance means. Don’t even dare to renormalize it! Or you will be accused of all of these kittens' premature deaths. I know you do this at least one hundred times per second!
 </p>
