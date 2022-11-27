@@ -59,7 +59,7 @@ So there are many variations of KF when it comes to attitude estimation but at t
 </p>
 
 $$
-X: N(\mu, \sigma^2) \land \mu \in \real, \sigma^2 \in \real_{>0}
+X: N(\mu, \sigma^2) \land \mu \in \mathbb{R}, \sigma^2 \in \mathbb{R}_{>0}
 $$
 
 <p style="text-align: justify">
@@ -93,7 +93,7 @@ Also, to avoid confusion and for the sake of simplicity let's just stick to the 
 </p>
 
 $$
-z = \frac{1}{\sigma^2}e^{i\alpha} \land \sigma^2 \in \real_{>0}, \alpha \in \real, i^2 = -1
+z = \frac{1}{\sigma^2}e^{i\alpha} \land \sigma^2 \in \mathbb{R}_{>0}, \alpha \in \mathbb{R}, i^2 = -1
 $$
 
 <p style="text-align: justify">
