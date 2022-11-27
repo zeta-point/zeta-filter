@@ -101,7 +101,7 @@ Now the state equation/model or however called - discrete of course.
 </p>
 
 $$
-\^{z}\_k = z\_{k-1}z\_\beta
+\tilde{z}\_k = z\_{k-1}z\_\beta
 $$
 
 $$
