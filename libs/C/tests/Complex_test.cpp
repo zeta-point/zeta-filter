@@ -46,3 +46,27 @@ TEST(Complex, fromOrthogonal_shouldInitializeComplexNumberWithProperValues)
     EXPECT_DOUBLE_EQ(sqrt(3), result.r);
     EXPECT_DOUBLE_EQ(sqrt(1), result.i);
 }
+
+TEST(Complex, getArgument_shouldReturnProperArgumentValue)
+{
+    // Given
+    Complex_t num = {sqrt(3), 1};
+
+    // When
+    double angle = Complex_getArgument(&num);
+
+    // Then
+    EXPECT_DOUBLE_EQ(M_PI/6, angle);
+}
+
+TEST(Complex, getMagnitude_shouldReturnProperMagnitudeValue)
+{
+    // Given
+    Complex_t num = {1, 1};
+
+    // When
+    double magnitude = Complex_getMagnitude(&num);
+
+    // Then
+    EXPECT_DOUBLE_EQ(sqrt(2), magnitude);
+}

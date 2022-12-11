@@ -38,6 +38,20 @@ extern "C" {
     */
     void Complex_fromOrthogonal(Complex_t * result, double angle, double radius);
 
+    /**
+     * @brief Calculates complex number argument ( angle ) in radians
+     * @param num pointer to the input complex number
+     * @returns argument of the complex number in radians
+    */
+    double Complex_getArgument(Complex_t * num);
+
+    /**
+     * @brief Calculates complex number magnitude ( length/radius )
+     * @param num pointer to the input complex number
+     * @returns magnitude of the complex number
+    */
+    double Complex_getMagnitude(Complex_t * num);
+
 #ifdef __cplusplus
 }
 #endif
