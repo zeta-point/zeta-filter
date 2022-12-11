@@ -5,9 +5,9 @@
 TEST(Complex, multiply_shouldReturnProperValue)
 {
     // Given
-    Complex num1   = {1, 0};
-    Complex num2   = {0, 2};
-    Complex result = {0, 0};
+    Complex_t num1   = {1, 0};
+    Complex_t num2   = {0, 2};
+    Complex_t result = {0, 0};
 
     // When
     Complex_multiply(&result, &num1, &num2);
@@ -20,9 +20,9 @@ TEST(Complex, multiply_shouldReturnProperValue)
 TEST(Complex, multiplyByScalar_shouldReturnProperValue)
 {
     // Given
-    Complex num    = {1, 1};
+    Complex_t num    = {1, 1};
     double  scalar = 3;
-    Complex result = {0, 0};
+    Complex_t result = {0, 0};
 
     // When
     Complex_multiplyByScalar(&result, &num, scalar);
@@ -32,10 +32,10 @@ TEST(Complex, multiplyByScalar_shouldReturnProperValue)
     EXPECT_DOUBLE_EQ(3, result.i);
 }
 
-TEST(Complex, Complex_fromOrthogonal_shouldInitializeComplexNumberWithProperValues)
+TEST(Complex, fromOrthogonal_shouldInitializeComplexNumberWithProperValues)
 {
     // Given
-    Complex result = {0, 0};
+    Complex_t result = {0, 0};
     double  angle  = M_PI/6;
     double  radius = 2;
 

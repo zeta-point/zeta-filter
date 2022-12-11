@@ -12,7 +12,7 @@ extern "C" {
     {
         double r; // realis
         double i; // imaginalis
-    } Complex;
+    } Complex_t;
     
     /**
      * @brief Multiplies two complex numbers and saves value to result
@@ -20,7 +20,7 @@ extern "C" {
      * @param first pointer to first multiplication factor
      * @param second pointer to second multiplication factor
     */
-    void Complex_multiply(Complex * result, Complex * first, Complex * second);
+    void Complex_multiply(Complex_t * result, Complex_t * first, Complex_t * second);
 
     /**
      * @brief Multiplies complex number by scalar value and saves value to result
@@ -28,7 +28,7 @@ extern "C" {
      * @param first pointer to the complex number
      * @param scalar multiplication factor
     */
-    void Complex_multiplyByScalar(Complex * result, Complex * num, double scalar);
+    void Complex_multiplyByScalar(Complex_t * result, Complex_t * num, double scalar);
 
     /**
      * @brief Creates complex number from orthogonal coordinates ( angle and radius )
@@ -36,7 +36,7 @@ extern "C" {
      * @param angle argument/angle of the complex number in radians
      * @param radius magnitude/radius/length of the complex number
     */
-    void Complex_fromOrthogonal(Complex * result, double angle, double radius);
+    void Complex_fromOrthogonal(Complex_t * result, double angle, double radius);
 
 #ifdef __cplusplus
 }
