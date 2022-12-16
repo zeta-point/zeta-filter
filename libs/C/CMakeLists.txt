@@ -4,10 +4,12 @@ project(zeta-filter)
 
 set(TEST_FILES
     tests/Complex_test.cpp
+    tests/Zeta_test.cpp
 )
 
 set(SOURCE_FILES
     src/Complex.c
+    src/Zeta.c
 )
 
 add_executable(test 

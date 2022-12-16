@@ -23,6 +23,14 @@ extern "C" {
     void Complex_multiply(Complex_t * result, Complex_t * first, Complex_t * second);
 
     /**
+     * @brief Adds two complex numbers and saves value to result
+     * @param result pointer to the result storage
+     * @param first pointer to first mumber to add
+     * @param second pointer to second number to add
+    */
+    void Complex_add(Complex_t * result, Complex_t * first, Complex_t * second);
+
+    /**
      * @brief Multiplies complex number by scalar value and saves value to result
      * @param result pointer to the result storage
      * @param first pointer to the complex number
@@ -43,14 +51,14 @@ extern "C" {
      * @param num pointer to the input complex number
      * @returns argument of the complex number in radians
     */
-    double Complex_getArgument(Complex_t * num);
+    double Complex_getArgument(const Complex_t * num);
 
     /**
      * @brief Calculates complex number magnitude ( length/radius )
      * @param num pointer to the input complex number
      * @returns magnitude of the complex number
     */
-    double Complex_getMagnitude(Complex_t * num);
+    double Complex_getMagnitude(const Complex_t * num);
 
 #ifdef __cplusplus
 }
