@@ -104,5 +104,5 @@ TEST(Zeta, update_shouldCorrectPriorEstimate)
 
     // Then
     EXPECT_COMPLEX_NEAR(1, 1, zeta.x_post);
-    // EXPECT_COMPLEX_NEAR(1, 1, zeta.x_prior);
+    EXPECT_COMPLEX_NEAR(1, 1, zeta.x_prior);
 }
