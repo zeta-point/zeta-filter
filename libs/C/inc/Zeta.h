@@ -48,7 +48,7 @@ extern "C" {
      * Angular velocity integration is done using zero order hold.
      * @param filter a pointer to filter data
      * @param b a pointer to gyroscope control data
-     * @param dt time delta between last model advancement.
+     * @param dt time delta between last model advancement in seconds
     */
     void Zeta_predict(Zeta_t * filter, Control_t *b, double dt);
 
