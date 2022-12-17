@@ -88,3 +88,21 @@ TEST(Zeta, predict_withMultipleSteps_shouldAdvanceModelProperly)
     // Then
     EXPECT_COMPLEX_NEAR(-1/5.0, 0, zeta.x_prior);
 }
+
+TEST(Zeta, update_shouldCorrectPriorEstimate)
+{
+    // Given
+    auto zeta = getZeroAngleInitializedFilter();
+    zeta.x_prior.r = 1;
+
+    Output_t out;
+    out.y = {0, 2};
+    out.var_phi = 1;
+
+    // When
+    Zeta_update(&zeta, &out);
+
+    // Then
+    EXPECT_COMPLEX_NEAR(1, 1, zeta.x_post);
+    // EXPECT_COMPLEX_NEAR(1, 1, zeta.x_prior);
+}

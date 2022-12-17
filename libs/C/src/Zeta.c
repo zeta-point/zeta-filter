@@ -17,7 +17,7 @@ void Zeta_predict(Zeta_t *filter, Control_t *b, double dt)
     Complex_fromOrthogonal(&filter->b, angle, radius);
     Complex_multiply(&filter->x_prior, &filter->x_post, &filter->b);
 
-    // Just in case predict is run at different delta time than update
+    // In case predict is run at different delta time than update
     filter->x_post.r = filter->x_prior.r;
     filter->x_post.i = filter->x_prior.i;
 }
@@ -25,7 +25,11 @@ void Zeta_predict(Zeta_t *filter, Control_t *b, double dt)
 void Zeta_update(Zeta_t *filter, Output_t *y)
 {
     double y_len_scale = 1/(Complex_getMagnitude(&y->y) * y->var_phi);
-    Complex_multiplyByScalar(&filter->y, &y->y, y_len_scale);
 
-    Complex_add(&filter->x_post, &filter->x_prior, &y->y);
+    Complex_multiplyByScalar(&filter->y, &y->y, y_len_scale);
+    Complex_add(&filter->x_post, &filter->x_prior, &filter->y);
+
+    // In case someone extracts angle estimate from x prior
+    filter->x_prior.r = filter->x_post.r;
+    filter->x_prior.i = filter->x_post.i;
 }
