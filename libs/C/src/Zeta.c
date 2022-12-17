@@ -1,10 +1,10 @@
 #include "Zeta.h"
 
-void Zeta_init(Zeta_t *data)
+void Zeta_init(Zeta_t *filter)
 {
     // state to zero meaning inifinite variance
-    Complex_multiplyByScalar(&data->x_prior, &data->x_prior, 0);
-    Complex_multiplyByScalar(&data->x_post,  &data->x_post,  0);
+    Complex_multiplyByScalar(&filter->x_prior, &filter->x_prior, 0);
+    Complex_multiplyByScalar(&filter->x_post,  &filter->x_post,  0);
 }
 
 void Zeta_predict(Zeta_t *filter, Control_t *b, double dt)
